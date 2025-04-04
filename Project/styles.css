@@ -1,0 +1,21 @@
+/* # for ids
+. for classes*/
+h1{
+    font-family: Impact;
+    text-align: center;
+}
+
+h2{
+    font-family: Impact;
+    text-align: center;
+}
+
+/* Color Randomizer */
+.container{
+    border: 2px black solid;
+    margin: 0px 300px 0px 300px;
+}
+
+.div-color {
+    height: 50px;
+}

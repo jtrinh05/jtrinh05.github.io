@@ -1,0 +1,51 @@
+/* # for ids
+. for classes*/
+h1{
+    font-family: Impact;
+    text-align: center;
+}
+
+h2{
+    font-family: Impact;
+    text-align: center;
+}
+
+h3{
+    font-family: Impact;
+}
+
+/* Website Divs */
+.website{
+    width: auto;
+    height: 50%;
+    margin: 1rem;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Website Images */
+.workImg{
+    object-fit: contain;
+    width:100%; 
+    height:100%;
+}
+
+/* Summaries */
+.works{
+    background-color: rgb(255, 255, 255, 0.75);
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+/* Summary Hover */
+.website:hover .works {
+    transform: translateY(0);
+}
