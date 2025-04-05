@@ -1,0 +1,48 @@
+/* # for ids
+. for classes*/
+h1 {
+    font-family: Georgia;
+    text-align: center;
+  }
+  
+  h2 {
+    font-family: Georgia;
+    text-align: center;
+  }
+  
+  h3 {
+    font-family: Georgia;
+  }
+  
+  /* Website Images */
+  .workImg {
+    object-fit: cover; /* Cover the available space */
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  #wrap {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center the columns */
+    margin: 1rem;
+  }
+  
+  #left_col {
+    flex: 1 1 700px; /* Grow, shrink, and base width */
+    margin: 1rem;
+    overflow: hidden; /* Prevent image overflow */
+  }
+  
+  #right_col {
+    flex: 1 1 600px; /* Grow, shrink, and base width */
+    margin: 1rem;
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    #left_col,
+    #right_col {
+      flex: 1 1 100%; /* Take full width on mobile */
+    }
+  }
