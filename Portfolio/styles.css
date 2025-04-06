@@ -49,3 +49,31 @@ h3{
 .website:hover .works {
     transform: translateY(0);
 }
+
+#wrap {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center the columns */
+    margin: 1rem;
+  }
+
+  #left_col {
+    flex: 1 1 700px; /* Grow, shrink, and base width */
+    margin: 1rem;
+    overflow: hidden; /* Prevent image overflow */
+    height: 60%;
+  }
+
+  #right_col {
+    flex: 1 1 700px; /* Grow, shrink, and base width */
+    margin: 1rem;
+    height: 60%;
+  }
+
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    #left_col,
+    #right_col {
+      flex: 1 1 100%; /* Take full width on mobile */
+    }
+  }
