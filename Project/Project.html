@@ -19,8 +19,23 @@
         Include Overshirt:
         <input type="checkbox" id="overshirtCheckbox">
     </label>
-        <p>testing testing teesting</p>
+    <br>
 
+    <div> <!---Divs all the way down to make it a pop out when you click "Choose file."
+        When you initially click "Choose file" the initial window with all these divs pop up.
+        Select your image and then have the color selectors below it.
+        "next" button at top right after you're done selecting it -->
+        <div class="module_body">
+            <input type="file" id="imageUpload" accept="image/*"> <br>
+            <canvas id="imageCanvas"></canvas> <br>
+            <input type="text" id="hexInput" placeholder="#RRGGBB"> <br>
+            <div id="colorDisplay1" class="colorDisplay"></div>
+            <div id="colorDisplay2" class="colorDisplay"></div>
+            <div id="colorDisplay3" class="colorDisplay"></div>
+            <div id="colorDisplay4" class="colorDisplay"></div>
+            <div id="colorDisplay5" class="colorDisplay"></div>
+        </div>
+    </div>
     <script src="script.js"></script>
     </body>
 </html>
