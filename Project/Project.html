@@ -20,11 +20,29 @@
         <input type="checkbox" id="overshirtCheckbox">
     </label>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="buttonUpload">
+        <button type="button" class="btn" onclick="openPopup()">Upload Image</button>
+        <div class="module_cell">
+            <div class="popup" id="popup">
+                <div class="module_header">
+                    <div class="module_title">Select Image</div>
+                    <button class="close" type="button" onclick="closePopup()">&#x2716;</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div> <!---Divs all the way down to make it a pop out when you click "Choose file."
         When you initially click "Choose file" the initial window with all these divs pop up.
         Select your image and then have the color selectors below it.
         "next" button at top right after you're done selecting it -->
+        
+
         <div class="module_body">
             <input type="file" id="imageUpload" accept="image/*"> <br>
             <canvas id="imageCanvas"></canvas> <br>

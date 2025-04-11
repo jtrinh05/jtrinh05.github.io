@@ -1,3 +1,13 @@
+let popup = document.querySelector(".module_cell"); // Target the module_cell
+
+function openPopup() {
+    popup.classList.add("open-popup");
+}
+
+function closePopup() {
+    popup.classList.remove("open-popup");
+}
+
 const imageUpload = document.getElementById("imageUpload");
 const imageCanvas = document.getElementById("imageCanvas");
 const hexInput = document.getElementById("hexInput");
