@@ -7,6 +7,28 @@
         <h1 id="title">Projects</h1>
         <h2>Outfit Color Randomizer</h2>
         <br><br>
+        <div class="buttonUpload">
+            <button type="button" class="btn" onclick="openPopup()">Upload Image</button>
+            <div class="module_cell">
+                <div class="popup" id="popup">
+                    <div class="module_header">
+                        <div class="module_title">Select Image</div>
+                        <button class="close" type="button" onclick="closePopup()">&#x2716;</button>
+                        <button class="next" type="button" onclick="nextPopup()">Next</button>
+                    </div>
+                    <div class="module_body">
+                        <input type="file" id="imageUpload" accept="image/*"> <br>
+                        <canvas id="imageCanvas"></canvas> <br>
+                        <div id="colorDisplay1" class="colorDisplayPopup"></div>
+                        <div id="colorDisplay2" class="colorDisplayPopup"></div>
+                        <div id="colorDisplay3" class="colorDisplayPopup"></div>
+                        <div id="colorDisplay4" class="colorDisplayPopup"></div>
+                        <div id="colorDisplay5" class="colorDisplayPopup"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
     <div class="container">
         Skin Tone: <div id="skinTone" class="div-color"></div>
         Shirt: <div id="shirt" class="div-color"></div>
@@ -19,23 +41,19 @@
         Include Overshirt:
         <input type="checkbox" id="overshirtCheckbox">
     </label>
+        <div class="pickerColors">
+            <div id="colorDisplay1" class="colorDisplay"></div>
+            <div id="colorDisplay2" class="colorDisplay"></div>
+            <div id="colorDisplay3" class="colorDisplay"></div>
+            <div id="colorDisplay4" class="colorDisplay"></div>
+            <div id="colorDisplay5" class="colorDisplay"></div>
+        </div>
     <br>
     <br>
     <br>
     <br>
     <br>
 
-    <div class="buttonUpload">
-        <button type="button" class="btn" onclick="openPopup()">Upload Image</button>
-        <div class="module_cell">
-            <div class="popup" id="popup">
-                <div class="module_header">
-                    <div class="module_title">Select Image</div>
-                    <button class="close" type="button" onclick="closePopup()">&#x2716;</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div> <!---Divs all the way down to make it a pop out when you click "Choose file."
         When you initially click "Choose file" the initial window with all these divs pop up.
