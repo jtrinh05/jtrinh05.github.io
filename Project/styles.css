@@ -45,7 +45,8 @@ h2{
 }
 
 .popup {
-    width: 400px;
+    width: 400px; /* Example width */
+    /* You can also set a max-height if needed */
     background: rgb(255, 255, 255);
     border-radius: 10px;
     position: relative;
@@ -54,6 +55,8 @@ h2{
     padding: 10px;
     opacity: 0; /* Initially hidden */
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    max-height: 80vh; /* Optional: Set a maximum height for the popup */
+    overflow-y: auto; /* Optional: Add scroll if content exceeds max-height */
 }
 
 .open-popup {
@@ -127,4 +130,16 @@ h2{
 
 .pickerColors{
     text-align: center;
+}
+
+.hexInput{
+    margin: 35px 0 0 0;
+    border: none;
+    background-color: rgb(255, 255, 255, .9);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px 0 5px 0;
+    font-size: 12px;
+    font-weight: 900;
 }
