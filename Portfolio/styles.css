@@ -58,14 +58,14 @@ h3{
   }
 
   #left_col {
-    flex: 1 1 700px; /* Grow, shrink, and base width */
+    flex: 1 1 500px; /* Grow, shrink, and base width */
     margin: 1rem;
     overflow: hidden; /* Prevent image overflow */
     height: 60%;
   }
 
   #right_col {
-    flex: 1 1 700px; /* Grow, shrink, and base width */
+    flex: 1 1 500px; /* Grow, shrink, and base width */
     margin: 1rem;
     height: 60%;
   }
