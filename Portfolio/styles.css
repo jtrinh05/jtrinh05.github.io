@@ -14,7 +14,18 @@ h3{
     font-family: Georgia;
 }
 
-/* Website Divs */
+/*About Section*/
+.aboutBody {
+  text-align: center;
+  padding: 10px 20px;
+  width: 80%; /* Or any specific width you prefer */
+  margin: 0 auto; /* Centers the element horizontally */
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+/* Website Summary Divs */
 .website{
     width: auto;
     height: 50%;
@@ -35,7 +46,7 @@ h3{
 /* Summaries */
 .works{
     background-color: rgba(243, 243, 243);
-    padding: 2rem;
+    padding: 0 20px 10px 20px;
     position: absolute;
     left: 0;
     bottom: 0;
