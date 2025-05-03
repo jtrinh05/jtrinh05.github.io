@@ -14,15 +14,86 @@ h3{
     font-family: Georgia;
 }
 
+#intro_name{
+  font-family: Georgia;
+  text-align: left;
+}
+
+/*Portait*/
+.circular--portrait {
+  position: relative; 
+  width: 300px; 
+  height: 300px; 
+  overflow: hidden; 
+  border-radius: 50%; 
+} 
+
+.circular--portrait img { 
+  width: 100%; 
+  height: auto; 
+  margin-top: -50px;
+}
+
 /*About Section*/
 .aboutBody {
-  text-align: center;
-  padding: 10px 20px;
-  width: 80%; /* Or any specific width you prefer */
-  margin: 0 auto; /* Centers the element horizontally */
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  width: 100%; /* Or any specific width you prefer */
+}
+
+/*Intro columns*/
+#wrap_intro {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center; /* Center the columns */
+  margin: 5rem 1rem;
+  gap: 0.5rem; /* Or whatever gap you prefer */
+}
+
+#left_intro {
+  flex: 1 1 auto; /* Adjust for better wrapping */
+  max-width: 400px; /* Limit maximum width */
+  overflow: hidden;
+  justify-items: center;
+  margin: 0;
+}
+
+#right_intro {
+  flex: 1 1 auto; /* Adjust for better wrapping */
+  max-width: 600px; /* Limit maximum width */
+  margin: 30px;
+  background-color: #A5C9CA;
   border-radius: 10px;
-  background: #f9f9f9;
+  padding: 10px 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  #left_intro,
+  #right_intro {
+    flex-basis: 100%; /* Take full width on smaller screens */
+    max-width: none; /* Remove max-width */
+  }
+  #wrap_intro {
+    gap: 1rem; /* Add a bit more vertical gap when stacked */
+  }
+}
+
+/* Skillset */
+#skills_head{
+  margin: 0;
+  text-align: center;
+}
+
+.three-column-container {
+  display: flex; /* Enable flex container */
+}
+
+.column {
+  flex: 1; /* Each column will take up equal available space */
+  padding: 15px; /* Add some padding for spacing within columns */
+  margin: 15px;
+  background-color: #A5C9CA;
+  border-radius: 10px;
 }
 
 /* Website Summary Divs */
