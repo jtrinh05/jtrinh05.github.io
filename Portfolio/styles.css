@@ -1,5 +1,48 @@
 /* # for ids
 . for classes*/
+
+/*Header*/
+.menu_bar {
+  background-color: #A5C9CA; /* Light background color for the header */
+  color: #000000; /* Dark text color */
+  padding: 20px 35px; /* Vertical and horizontal padding */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out logo and navigation */
+  align-items: center; /* Vertically align items */
+  margin: -8px;
+}
+
+.logo h3 {
+  margin: 0; /* Remove default margin for the heading */
+  font-size: 24px; /* Adjust font size as needed */
+}
+
+#site-nav ul {
+  list-style: none; /* Remove bullet points from the list */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Arrange list items horizontally */
+}
+
+#site-nav ul li {
+  margin-left: 20px; /* Space between menu items */
+}
+
+#site-nav ul li:first-child {
+  margin-left: 0; /* Remove left margin for the first item */
+}
+
+#site-nav ul li a {
+  text-decoration: none; /* Remove underlines from links */
+  color: #333; /* Link color */
+  font-size: 16px; /* Adjust font size */
+}
+
+#site-nav ul li a:hover {
+  color: #007bff; /* Change color on hover (example blue) */
+}
+
+
 h1{
     font-family: Georgia;
     text-align: center;
@@ -80,11 +123,15 @@ h3{
 
 /* Skillset */
 #skills_head{
-  margin: 0;
+  margin-top: -15px;
   text-align: center;
 }
 
-.three-column-container {
+#skills_body{
+  padding: 0 10px;
+}
+
+.four-column-container {
   display: flex; /* Enable flex container */
 }
 
