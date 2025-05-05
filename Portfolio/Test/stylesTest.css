@@ -1,0 +1,298 @@
+/* # for ids
+. for classes*/
+
+/*Header*/
+.menu_bar {
+  background-color: #A5C9CA; /* Light background color for the header */
+  color: #000000; /* Dark text color */
+  padding: 20px 35px; /* Vertical and horizontal padding */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out logo and navigation */
+  align-items: center; /* Vertically align items */
+  margin: -8px;
+}
+
+.logo h3 {
+  margin: 0; /* Remove default margin for the heading */
+  font-size: 24px; /* Adjust font size as needed */
+}
+
+#site-nav ul {
+  list-style: none; /* Remove bullet points from the list */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Arrange list items horizontally */
+}
+
+#site-nav ul li {
+  margin-left: 20px; /* Space between menu items */
+}
+
+#site-nav ul li:first-child {
+  margin-left: 0; /* Remove left margin for the first item */
+}
+
+#site-nav ul li a {
+  text-decoration: none; /* Remove underlines from links */
+  color: #333; /* Link color */
+  font-size: 16px; /* Adjust font size */
+}
+
+#site-nav ul li a:hover {
+  color: #007bff; /* Change color on hover (example blue) */
+}
+
+
+h1{
+    font-family: Georgia;
+    text-align: center;
+}
+
+h2{
+    font-family: Georgia;
+    text-align: center;
+}
+
+h3{
+    font-family: Georgia;
+    text-align: center;
+}
+
+#intro_name{
+  font-family: Georgia;
+  text-align: left;
+}
+
+/*Portait*/
+.circular--portrait {
+  position: relative; 
+  width: 300px; 
+  height: 300px; 
+  overflow: hidden; 
+  border-radius: 50%; 
+} 
+
+.circular--portrait img { 
+  width: 100%; 
+  height: auto; 
+  margin-top: -50px;
+}
+
+/*About Section*/
+.aboutBody {
+  text-align: left;
+  width: 100%; /* Or any specific width you prefer */
+}
+
+/*Intro columns*/
+#wrap_intro {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center; /* Center the columns */
+  margin: 5rem 1rem;
+  gap: 0.5rem; /* Or whatever gap you prefer */
+}
+
+#left_intro {
+  flex: 1 1 auto; /* Adjust for better wrapping */
+  max-width: 400px; /* Limit maximum width */
+  overflow: hidden;
+  justify-items: center;
+  margin: 0;
+}
+
+#right_intro {
+  flex: 1 1 auto; /* Adjust for better wrapping */
+  max-width: 600px; /* Limit maximum width */
+  margin: 30px;
+  background-color: #A5C9CA;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  #left_intro,
+  #right_intro {
+    flex-basis: 100%; /* Take full width on smaller screens */
+    max-width: none; /* Remove max-width */
+  }
+  #wrap_intro {
+    gap: 1rem; /* Add a bit more vertical gap when stacked */
+  }
+}
+
+/* Skillset */
+#skills_head{
+  margin-top: -15px;
+  text-align: center;
+}
+
+#skills_body{
+  padding: 0 10px;
+}
+
+.four-column-container {
+  display: grid; /* Or display: flex; flex-wrap: wrap; */
+  grid-template-columns: repeat(4, 1fr); /* Creates four equal-width columns */
+  margin-bottom: 85px;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .four-column-container {
+    grid-template-columns: repeat(2, 1fr); /* Change to two equal-width columns */
+  }
+}
+
+@media (max-width: 768px) {
+  .four-column-container {
+    grid-template-columns: repeat(2, 1fr); /* Change to two equal-width columns */
+  }
+}
+
+.column {
+  flex: 1; /* Each column will take up equal available space */
+  padding: 15px; /* Add some padding for spacing within columns */
+  margin: 15px;
+  background-color: #A5C9CA;
+  border-radius: 10px;
+}
+
+/* Website Summary Divs */
+.website{
+  width: 100%; /* Slides will now take full width */
+  height: auto;
+  margin: 1rem 0;
+  background-color: #A5C9CA;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  flex-grow: 1; /* Allow items to grow to fill available space */
+  flex-shrink: 1; /* Allow items to shrink if needed */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Summaries */
+.works{
+  background-color: rgba(243, 243, 243);
+  padding: 0rem 1rem; /* Add some padding to the text content */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+
+#slideshow_container {
+  position: relative;
+  max-width: 65vw; /* Adjust percentage as needed */
+  margin: 2rem auto;
+  padding: 0; /* Remove side padding that was for peeking */
+  overflow: hidden; /* Keep overflow hidden */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #slideshow_container {
+    max-width: 80vw; /* Adjust percentage as needed */
+}
+}
+
+@media (max-width: 768px) {
+  #slideshow_container {
+    max-width: 80vw; /* Adjust percentage as needed */
+}
+}
+
+.slide {
+  display: none;
+  width: 100%; /* Make each slide take the full width of the container */
+  margin: 0; /* Remove side margins */
+  transition: transform 0.4s ease-in-out; /* Only transition transform */
+  transform: translateX(0);
+}
+
+.slide:first-child {
+  display: block;
+}
+
+.active-slide {
+  display: block;
+  transform: translateX(0);
+  z-index: 2; /* Ensure the current slide is on top */
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  z-index: 3; /* Ensure they are above the slides */
+}
+
+.next {
+  right: 0px; /* Adjust to the edge */
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0px; /* Adjust to the edge */
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slide-indicators {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.indicator {
+  cursor: pointer;
+  height: 10px;
+  width: 25px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .indicator:hover {
+  background-color: #717171;
+}
+
+.workImg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.website:hover .works {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .works {
+    max-height: 35%;
+    overflow-y: auto;
+    transform: translateY(51%);
+  }
+
+  .website:hover .works {
+    transform: translateY(0);
+  }
+}
