@@ -1,3 +1,5 @@
+@import url('satoshi.css');
+
 /* # for ids
 . for classes*/
 
@@ -10,6 +12,10 @@
   justify-content: space-between; /* Space out logo and navigation */
   align-items: center; /* Vertically align items */
   margin: -8px;
+}
+
+li{
+  font-family: 'Satoshi-Medium';
 }
 
 .logo h3 {
@@ -44,22 +50,27 @@
 
 
 h1{
-    font-family: Georgia;
+    font-family: 'Satoshi-Bold';
+    font-weight: 900;
     text-align: center;
 }
 
 h2{
-    font-family: Georgia;
+    font-family: 'Satoshi-Bold';
     text-align: center;
 }
 
 h3{
-    font-family: Georgia;
+    font-family: 'Satoshi-Bold';
     text-align: center;
 }
 
+p{
+  font-family: 'Satoshi-Regular';
+}
+
 #intro_name{
-  font-family: Georgia;
+  font-family: 'Satoshi-Bold';
   text-align: left;
 }
 
@@ -82,6 +93,10 @@ h3{
 .aboutBody {
   text-align: left;
   width: 100%; /* Or any specific width you prefer */
+  line-height: 1.5;
+}
+#introAbout{
+  font-weight: bold;
 }
 
 /*Intro columns*/
@@ -104,7 +119,7 @@ h3{
 #right_intro {
   flex: 1 1 auto; /* Adjust for better wrapping */
   max-width: 600px; /* Limit maximum width */
-  margin: 30px;
+  margin: 0 30px;
   background-color: #A5C9CA;
   border-radius: 10px;
   padding: 10px 20px;
@@ -130,6 +145,7 @@ h3{
 
 #skills_body{
   padding: 0 10px;
+  line-height: 1.5;
 }
 
 .four-column-container {
