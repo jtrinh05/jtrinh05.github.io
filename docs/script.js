@@ -4,22 +4,30 @@ document.addEventListener('DOMContentLoaded', function() {
   const lowerOffsetFactor = 0.3;
 
   navLinks.forEach(link => {
-    link.addEventListener('click', function(event) {
-      event.preventDefault();
+        link.addEventListener('click', function(event) {
+            const targetHref = this.getAttribute('href');
 
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
+            // Check if the link is an internal (hash) link
+            if (targetHref.startsWith('#')) {
+                event.preventDefault(); // Prevent default only for internal links
 
-      if (targetElement) {
-        const targetPosition = targetElement.offsetTop - (window.innerHeight * lowerOffsetFactor) + (targetElement.offsetHeight / 2);
+                const targetId = targetHref; // It's already a valid ID selector
+                const targetElement = document.querySelector(targetId);
 
-        window.scrollTo({
-          top: targetPosition - headerHeight,
-          behavior: 'smooth'
+                if (targetElement) {
+                    const targetPosition = targetElement.offsetTop - (window.innerHeight * lowerOffsetFactor) + (targetElement.offsetHeight / 2);
+
+                    window.scrollTo({
+                        top: targetPosition - headerHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+            // If it's not an internal hash link (like your LinkedIn URL),
+            // we don't call event.preventDefault(), so the browser will
+            // perform its default action of navigating to the external URL.
         });
-      }
     });
-  });
 });
 
 let slideIndex = 0;
